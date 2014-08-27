@@ -1,0 +1,37 @@
+;;; 
+Export: Release 10.2.0.3.0 - Production on 星期三, 27 8月, 2014 11:20:57
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+;;; 
+连接到: Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - Production
+With the Partitioning, OLAP and Data Mining options
+启动 "HR"."SYS_EXPORT_SCHEMA_01":  hr/********@dlin DIRECTORY=innotech_oracle_export_folder DUMPFILE=export-2014-08-27.imp SCHEMAS=hr CONTENT=ALL 
+正在使用 BLOCKS 方法进行估计...
+处理对象类型 SCHEMA_EXPORT/TABLE/TABLE_DATA
+使用 BLOCKS 方法的总估计: 448 KB
+处理对象类型 SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+处理对象类型 SCHEMA_EXPORT/SEQUENCE/SEQUENCE
+处理对象类型 SCHEMA_EXPORT/TABLE/TABLE
+处理对象类型 SCHEMA_EXPORT/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+处理对象类型 SCHEMA_EXPORT/TABLE/INDEX/INDEX
+处理对象类型 SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+处理对象类型 SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+处理对象类型 SCHEMA_EXPORT/TABLE/COMMENT
+处理对象类型 SCHEMA_EXPORT/PROCEDURE/PROCEDURE
+处理对象类型 SCHEMA_EXPORT/PROCEDURE/ALTER_PROCEDURE
+处理对象类型 SCHEMA_EXPORT/VIEW/VIEW
+处理对象类型 SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+处理对象类型 SCHEMA_EXPORT/TABLE/TRIGGER
+处理对象类型 SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+. . 导出了 "HR"."COUNTRIES"                            6.085 KB      25 行
+. . 导出了 "HR"."DEPARTMENTS"                          6.632 KB      27 行
+. . 导出了 "HR"."EMPLOYEES"                            15.76 KB     107 行
+. . 导出了 "HR"."JOBS"                                 6.609 KB      19 行
+. . 导出了 "HR"."JOB_HISTORY"                          6.585 KB      10 行
+. . 导出了 "HR"."LOCATIONS"                            7.710 KB      23 行
+. . 导出了 "HR"."REGIONS"                              5.289 KB       4 行
+已成功加载/卸载了主表 "HR"."SYS_EXPORT_SCHEMA_01" 
+******************************************************************************
+HR.SYS_EXPORT_SCHEMA_01 的转储文件集为:
+  C:\SHARED\EXPORT\EXPORT\EXPORT-2014-08-27.IMP
+作业 "HR"."SYS_EXPORT_SCHEMA_01" 已于 11:21:05 成功完成

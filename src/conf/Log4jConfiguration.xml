@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="false" xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+  <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+  
+    <param name="Threshold" value="info"/>    
+    
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%p %t %c - %m%n"/>
+    </layout>
+    
+  </appender>
+  
+  <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+  	<param name="follow" value="true"/>
+    <param name="Threshold" value="debug"/>       
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%m%n"/>
+    </layout>
+    
+  </appender>
+  
+	<!-- The RollingFileAppender will log messages to rolling disk files,
+		 use this block to configure it -->
+  <appender name="ROLLING_FILE" class="org.apache.log4j.RollingFileAppender">
+  	<param name="Encoding" value="GBK"/>
+  	<param name="Append" value="true"/>
+  	
+    <!-- Default uses fully buffered operations for maximum performance
+    	but files may remain open and loose messages in the event of
+    	something like a crash, set value="false" below -->
+    <param name="BufferedIO" value="false"/>
+    
+    <!-- Default puts files in the user's home called VideoNMS.log[.X] -->
+     <param name="File" value="log/export.log"/>
+     <!-- param name="File" value="d:/TestAgent.log"/-->
+    
+    <!-- Maximum file size for each file -->
+    <param name="MaxFileSize" value="2MB"/>
+    
+    <!-- Keep a maximum of five backups (older full logs) around -->
+    <param name="MaxBackupIndex" value="4"/>
+    
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ABSOLUTE}: %-5p [%t:%c] %m%n"/>
+    </layout>
+    
+    <!-- If you wish the files to be in XML format instead of plain text
+    		(for a viewer like Chainsaw for example) use this layout instead
+    		of the PatternLayout defined above for the appender -->
+    <!-- layout class="org.apache.log4j.xml.XMLLayout"/ -->
+    
+  </appender>
+  
+    <!-- A SocketAppender will send messages to another host (possibly running
+  		the 'chainsaw' log viewer) over a TCP/IP socket but we normally leave
+  		it disabled later on, this block will configure it -->
+  <appender name="SOCKETAPPENDER" class="org.apache.log4j.net.SocketAppender">
+  	
+  	<!-- The server itself -->
+  	<param name="RemoteHost" value="localhost"/>
+  	
+  	<!-- The TCP port number on the remote server -->
+  	<param name="Port" value="4445"/>
+  </appender>
+
+
+  <logger name="export" additivity="false">
+	<level value ="info" />
+     <appender-ref ref="CONSOLE" />
+     <appender-ref ref="ROLLING_FILE" />
+   </logger> 
+
+  <root>
+    <level value ="error" />
+    <appender-ref ref="ROLLING_FILE" />
+  </root>	
+  
+</log4j:configuration>

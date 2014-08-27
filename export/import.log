@@ -1,0 +1,38 @@
+;;; 
+Import: Release 10.2.0.3.0 - Production on 星期三, 27 8月, 2014 11:20:24
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+;;; 
+连接到: Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - Production
+With the Partitioning, OLAP and Data Mining options
+已成功加载/卸载了主表 "HR"."SYS_IMPORT_SCHEMA_01" 
+启动 "HR"."SYS_IMPORT_SCHEMA_01":  hr/********@dlin DIRECTORY=innotech_oracle_export_folder DUMPFILE=export-2014-08-27.imp SCHEMAS=hr CONTENT=ALL TABLE_EXISTS_ACTION=REPLACE 
+处理对象类型 SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+处理对象类型 SCHEMA_EXPORT/SEQUENCE/SEQUENCE
+ORA-31684: 对象类型 SEQUENCE:"HR"."DEPARTMENTS_SEQ" 已存在
+ORA-31684: 对象类型 SEQUENCE:"HR"."EMPLOYEES_SEQ" 已存在
+ORA-31684: 对象类型 SEQUENCE:"HR"."LOCATIONS_SEQ" 已存在
+处理对象类型 SCHEMA_EXPORT/TABLE/TABLE
+处理对象类型 SCHEMA_EXPORT/TABLE/TABLE_DATA
+. . 导入了 "HR"."COUNTRIES"                            6.085 KB      25 行
+. . 导入了 "HR"."DEPARTMENTS"                          6.632 KB      27 行
+. . 导入了 "HR"."EMPLOYEES"                            15.76 KB     107 行
+. . 导入了 "HR"."JOBS"                                 6.609 KB      19 行
+. . 导入了 "HR"."JOB_HISTORY"                          6.585 KB      10 行
+. . 导入了 "HR"."LOCATIONS"                            7.710 KB      23 行
+. . 导入了 "HR"."REGIONS"                              5.289 KB       4 行
+处理对象类型 SCHEMA_EXPORT/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+处理对象类型 SCHEMA_EXPORT/TABLE/INDEX/INDEX
+处理对象类型 SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+处理对象类型 SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+处理对象类型 SCHEMA_EXPORT/TABLE/COMMENT
+处理对象类型 SCHEMA_EXPORT/PROCEDURE/PROCEDURE
+ORA-31684: 对象类型 PROCEDURE:"HR"."ADD_JOB_HISTORY" 已存在
+ORA-31684: 对象类型 PROCEDURE:"HR"."SECURE_DML" 已存在
+处理对象类型 SCHEMA_EXPORT/PROCEDURE/ALTER_PROCEDURE
+处理对象类型 SCHEMA_EXPORT/VIEW/VIEW
+ORA-31684: 对象类型 VIEW:"HR"."EMP_DETAILS_VIEW" 已存在
+处理对象类型 SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+处理对象类型 SCHEMA_EXPORT/TABLE/TRIGGER
+处理对象类型 SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+作业 "HR"."SYS_IMPORT_SCHEMA_01" 已经完成, 但是有 6 个错误 (于 11:20:42 完成)
